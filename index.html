@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Add boostrap external and internal links -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	
+	<title>Crystal Collertor</title>
+	
+	<meta charset="UTF-8">
+	<title>Document</title>
+<!-- Link to style.css file ABOVE-->
+	<!-- <link rel="stylesheet" type="text/css" href="assets/css/style.css"> -->
+
+	<script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="assets/javascript/game.js">
+
+	
+
+</head>
+<body>
+	<!-- Container, row, column for bootstrap -->
+<div id="main-container" class="container">
+<section class="main-section">
+
+	<!-- add rows and columns -->
+	<div class="row"> 
+    <div class="col-md-12"> 
+	
+	<!-- Header -->		
+	<div id="title">
+	<h1>CrystalsCollector!</h1>
+	</div>
+	<!-- add rows and columns -->
+	
+		<div id="instructions">	
+			<div class="row"> 
+    			<div class="col-md-12"> 
+	<!-- Display instructions -->
+
+		<p>You will be given a random number at the start of the game.</p>
+		<p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
+		<p>You win the game by matching your total score to random number,  you lost the game if your total score goes above the random number.</p>
+		<p>The value of each crystal is hidden from you until you click on it.</p>
+		<p>Each time when the game starts, the game will change the values of each crystal.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>		
+	
+	<!-- add rows and columns SIDE BY SIDE?-->
+	
+	<div class="row"> 
+    	<div class="col-md-6">
+    		<div id="random">
+    			<div>bigRandom</div>
+    		</div>
+    	</div>
+
+    
+    	<div class="col-md-6">
+    		<div id="winslosses">
+    			<div>
+   					<div>Wins: <div id="wins">wins</div>
+   					</div>
+    			</div>
+    			<div>
+    				<div>Losses: <div id="losses"></div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+
+	<!-- add rows and columns -->
+	<div class="row">
+	<!-- Add buttons... SIDE BY SIDE? -->
+    	<div class="col-md-3">
+    		<button type="button" class="btn btn-red" id="red"><img src="assets/images/red.png"></button>
+    	</div>    
+    
+    	<div class="col-md-3">
+    		<button type="button" class="btn btn-blue" id="blue"><img src="assets/images/blue.png"></button>
+    	</div>    
+    
+    	<div class="col-md-3">
+    		<button type="button" class="btn btn-yellow" id="yellow"><img src="assets/images/yellow.png"></button>
+    	</div>
+    
+    	<div class="col-md-3">
+    		<button type="button" class="btn btn-green" id=green><img src="assets/images/green.png"></button>
+    	</div>
+    </div>
+
+	<!-- add rows and columns -->
+	<div class="row"> 
+    	<div class="col-md-12">
+		<div id = "scorestyle">	
+			<div>Your total score is:</div>
+		</div>
+		</div>
+	</div>
+
+	<!-- add rows and columns -->
+	<div class="row"> 
+    	<div class="col-md-12">
+    		<div id = "counterstyle">
+    		<div id="counter">
+
+    			<div>counter</div>
+			</div>
+			</div>	
+    	</div>
+    </div>
+</section>
+</div>
+   
+   <!-- Set javascript and link to internal file -->
+	<script type="text/javascript" src="assets/javascript/game.js"></script>
+
+
+</body>
+</html>

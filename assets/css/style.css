@@ -1,0 +1,44 @@
+#title{
+	margin: 10px 0 0px 0;
+	background-color: brown;
+	color: white;
+	width: 50%;
+	padding: 20px;
+}
+
+#instructions{
+	margin: 10px 0 10px 0;
+	background-color: beige;
+	color: green;
+	width: 50%;
+	padding-bottom: 50px;
+}
+
+#random{
+	background-color: lightgreen;
+	margin: 10px 0 10px 0;
+	width: 30%;
+	padding-bottom: 40px;
+}
+
+#winslosses{
+	background-color: lightblue;
+	margin: 10px 0 10px 0;
+	width: 10%;
+	padding-bottom: 40px;
+}
+
+#scorestyle{
+	background-color: darkgreen;
+	color: white;
+	margin: 10px 0 10px 0;
+	width: 30%;
+}
+
+#counterstyle{
+	background-color: darkgreen;
+	color: white;
+	margin: 10px 0 10px 0;
+	width: 30%;
+	padding-bottom: 60px;
+}
