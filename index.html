@@ -20,7 +20,7 @@
 	
 
 </head>
-<body>
+<body background = "assets/images/background_img.jpg">
 	<!-- Container, row, column for bootstrap -->
 <div id="main-container" class="container">
 <section class="main-section">
@@ -54,23 +54,18 @@
 	<!-- add rows and columns SIDE BY SIDE?-->
 	
 	<div class="row"> 
-    	<div class="col-md-6">
+    	<div class="col-md-3">
     		<div id="random">
     			<div>bigRandom</div>
     		</div>
     	</div>
 
     
-    	<div class="col-md-6">
+    	<div class="col-md-3">
     		<div id="winslosses">
-    			<div>
-   					<div>Wins: <div id="wins">wins</div>
-   					</div>
-    			</div>
-    			<div>
-    				<div>Losses: <div id="losses"></div>
-    				</div>
-    			</div>
+   				<div><div id="winLoss">winLoss</div></div>
+   				<div>Wins: <div id="wins">wins</div></div>
+    			<div>Losses: <div id="losses"></div></div>
     		</div>
     	</div>
     </div>
@@ -78,19 +73,19 @@
 	<!-- add rows and columns -->
 	<div class="row">
 	<!-- Add buttons... SIDE BY SIDE? -->
-    	<div class="col-md-3">
+    	<div class="col-md-1" id="buttons">
     		<button type="button" class="btn btn-red" id="red"><img src="assets/images/red.png"></button>
     	</div>    
     
-    	<div class="col-md-3">
+    	<div class="col-md-1" id="buttons">
     		<button type="button" class="btn btn-blue" id="blue"><img src="assets/images/blue.png"></button>
     	</div>    
     
-    	<div class="col-md-3">
+    	<div class="col-md-1" id="buttons">
     		<button type="button" class="btn btn-yellow" id="yellow"><img src="assets/images/yellow.png"></button>
     	</div>
     
-    	<div class="col-md-3">
+    	<div class="col-md-1" id="buttons">
     		<button type="button" class="btn btn-green" id=green><img src="assets/images/green.png"></button>
     	</div>
     </div>

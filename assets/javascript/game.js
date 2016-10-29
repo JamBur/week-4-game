@@ -1,56 +1,97 @@
 $(document).ready(function() {
 
+	// create getRandom var to randomly generate a numbeer
 	var getRandom = function(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
+    	return Math.floor(Math.random() * (max - min + 1)) + min;
 	}
 
-	var counter = 0;
-	$("#counter").html(counter);
+	// set vars for wins and losses, which start as zero, 
+	// and create other vars
 
 	var wins = 0;
-	$("#wins").html(wins);
-
 	var losses = 0;
-	$("#losses").html(losses);
+	var randomRed;
+	var randomBlue;
+	var randomYellow;
+	var randomGreen;
+	var bigRandom;
+	var counter;
+	var winLoss = "";
 
-	var randomRed = getRandom(1,12);
-	var randomBlue = getRandom(1,12);
-	var randomYellow = getRandom(1,12);
-	var randomGreen = getRandom(1,12);
+	// set function to get random numbers within specified range 
+	// when called
 
-	var bigRandom = getRandom(19,120);
-	$("#random").html(bigRandom);
+	function gemReset (){
 
+		randomRed = getRandom(1,12);
+		randomBlue = getRandom(1,12);
 
-	$("#red").on("click", function() {
+		randomYellow = getRandom(1,12);
+		randomGreen = getRandom(1,12);
+		bigRandom = getRandom(19,120);
+		counter = 0;
+		write();
+	}
+	
+	// 	set function to add to my 4 inrementing spaces in html
+	function write (){
 
-		counter = counter + randomRed;
 		$("#counter").html(counter);
+		$("#wins").html(wins);
+		$("#losses").html(losses);
+		$("#random").html(bigRandom);
+		$("#winLoss").html(winLoss);
+	}
 
+	// set function increment the add gem amounts and check if won 
+	// after incrementing
+	function addTotal(increment){
+		counter = counter + increment;
+		checkWon();
+	}
+
+	// set function to be called if counter is equal to bigRandom
+	// to alert player, add win & reset. If counter is greater 
+	// than bigRandom it will alert player, add a loss & reset; 
+	// otherwise just keep counting
+	function checkWon(){
+		if (counter === bigRandom){
+			// $("#winLoss").html("You Won!!");
+			winLoss = "You Won!!";
+			wins++;
+			gemReset();
+		}else if (counter > bigRandom){
+			// $("#winLoss").html("You Lost!!");
+			winLoss = "You Lost!!";
+			losses++;
+			gemReset();
+		} else{
+			winLoss = "";
+			write();
+		}
+		
+	}
+
+	// set click functions for 4 gems that adds their amount to the 
+	// total when clicked
+	$("#red").on("click", function() {
+		addTotal(randomRed);
 	});
 
 	$("#blue").on("click", function() {
-
-		counter = counter + randomBlue;
-		$("#counter").html(counter);
-
+		addTotal(randomBlue);
 	});
 
 	$("#yellow").on("click", function() {
-
-		counter = counter + randomYellow;
-		$("#counter").html(counter);
-
+		addTotal(randomYellow);
 	});
 
 	$("#green").on("click", function() {
-
-		counter = counter + randomGreen;
-		$("#counter").html(counter);
-
+		addTotal(randomGreen);
 	});
 
-
+	// Call game reset
+	gemReset();
 
 });
 
